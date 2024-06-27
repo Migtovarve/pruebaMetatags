@@ -17,8 +17,8 @@ const Ppage: FC = () => {
 
   const descriptionTime  = (des:string)=>{
     setTimeout(()=>{
-      des = des + "2000"
-    }, 2000 )
+      des = des + "10000"
+    }, 10000 )
 
     return des
   }
