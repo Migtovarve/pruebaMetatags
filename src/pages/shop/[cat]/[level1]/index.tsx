@@ -9,6 +9,8 @@ const category :any = {
 }
 const product :any = { name: 'ejmplo - ', style:"errings"}
 
+const origin = (typeof window === 'undefined') ?  '' : window.location.origin
+
 const Ppage: FC = () => {
 
   const [isClient, setIsClient] = useState(false);
@@ -29,6 +31,11 @@ const Ppage: FC = () => {
     if (!category?.sku && !product?.name) window.location.assign("/shop");
   }, [cat, category])
 
+  console.log({
+    title,
+    description
+
+  })
 
   console.log("3")
 
@@ -50,13 +57,13 @@ const Ppage: FC = () => {
           <meta property="og:description" content={description} />
           <meta
             property="og:image"
-            content={checkImageSource(product?.variants[0]?.images[0])}
+            content={`${origin}/android-chrome-384x384.png`}
           />
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={description} />
           <meta
             name="twitter:image"
-            content={checkImageSource(product?.variants[0]?.images[0])}
+            content={`${origin}/android-chrome-384x384.png`}
           />
         </Head>
       </>
