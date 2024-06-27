@@ -15,6 +15,13 @@ const Ppage: FC = () => {
 
   const [isClient, setIsClient] = useState(false);
 
+  const descriptionTime  = (des:string)=>{
+    setTimeout(()=>{
+      des = des + "2000"
+    }, 2000 )
+
+    return des
+  }
 
   const router = useRouter();
 
@@ -44,17 +51,17 @@ const Ppage: FC = () => {
       <>
         <Head>
           <title>{title}</title>
-          <meta name="description" content={description} />
+          <meta name="description" content={descriptionTime(description)} />
           {/* Twitter */}
           <meta name="twitter:card" content="summary" key="twcard" />
 
           {/* Open Graph */}
-          <meta name="description" content={description} />
+          <meta name="description" content={descriptionTime(description)} />
           <meta property="og:type" content="website" />
           <meta property="og:title" content={title} />
           <meta property="og:site_name" content="Wove Made" />
           <meta property="og:url" content={`${router.route}`} />
-          <meta property="og:description" content={description} />
+          <meta property="og:description" content={descriptionTime(description)} />
           <meta
             property="og:image"
             content={`${origin}/android-chrome-384x384.png`}
