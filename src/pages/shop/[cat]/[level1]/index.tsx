@@ -1,11 +1,13 @@
 import { FC, useEffect, useState } from "react";
 import { checkImageSource} from "@/utils";
 import Head from "next/head";
-const category :any = {}
-const product :any = {}
 import { useRouter } from "next/router";
 import CategoryPage from "@/components/Ecommerce/CategoryPage";
 
+const category :any = {
+  sku: 'wbe'
+}
+const product :any = { name: 'ejmplo - ', style:"errings"}
 
 const Ppage: FC = () => {
 
