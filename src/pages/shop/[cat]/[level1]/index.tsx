@@ -39,7 +39,7 @@ const Ppage: FC = () => {
 
   console.log("3")
 
-  return isClient ? (
+  return true ? (
     product?.name ? (
       <>
         <Head>
@@ -66,9 +66,15 @@ const Ppage: FC = () => {
             content={`${origin}/android-chrome-384x384.png`}
           />
         </Head>
+        <div>
+          product
+        </div>
       </>
     ) : (
       <main id="main">
+        <div>
+          hola mundo 2 
+        </div>
         <CategoryPage />
       </main>
     )

@@ -45,16 +45,15 @@ const CategoryPage: FC = () => {
           content={title}
           key="ogsitename"
         />
-        <meta property="og:title" content={title} key="ogtitle" />
-        <meta property="og:description" content={variantType?.description || detail?.name || category?.name} key="ogdesc"  />
-        <meta property="og:description" content={""} key="ogdesc" />
+        <meta property="og:title" content={"TITULOOO!!O!OO!"} key="ogtitle" />
+        <meta property="og:description" content={"description 1"} key="ogdesc"  />
         {/* Twitter */}
         <meta name="twitter:card" content="summary" key="twcard" />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${origin}/android-chrome-384x384.png`} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={variantType?.description || detail?.name || category?.name} />
+        <meta name="twitter:title" content={"TITULOOO!!O!OO!"} />
+        <meta name="twitter:description" content={"description 1"} />
         <meta name="twitter:image" content={`${origin}/android-chrome-384x384.png`} />
       </Head>
       {detail !== undefined ? (
